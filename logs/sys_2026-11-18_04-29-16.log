@@ -1,0 +1,48 @@
+===LINUXSCOPE log===
+Date: Wed Nov 18 04:29:16 IST 2026
+
+======System Information======
+==== LINUXSCOPE ====
+Hostname: LAPTOP-FF599KIM
+Kernel: 3.6.10-710e5275.x86_64
+Uptime: 
+
+======CPU Monitor======
+==== CPU Monitor=====
+CPU Usage:  %
+=====================
+
+======Memory Monitor======
+==== Memory Monitor ====
+
+======Disk Monitor======
+==== disk Monitor ====
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  931G  853G   79G  92% /
+
+======Network Monitor======
+==== Network Monitor ====
+IP Address: 
+Interface: 
+
+======System Health======
+===== System health====
+CPU Load:
+Memory:
+
+======Process Monitor======
+=====Process Monitor=====
+Top CPU Processes:
+
+Top Memory Processes:
+
+======System Alerts======
+====System Alerts ====
+CPU Usage : %
+CPU Status : NORMAL
+
+Memory Usage :%
+Memory Status : NORMAL
+
+Disk Usage : 81925568%
+WARNING: High Disk Usage!
