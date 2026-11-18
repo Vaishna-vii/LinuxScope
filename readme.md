@@ -67,30 +67,27 @@ The C advisor is compiled by advisor_wrapper.sh when it runs, provided GCC is in
 Log filenames follow this pattern:
 logs/sys_YYYY-MM-DD_HH-MM-SS.log
 Each report contains the outputs of the monitoring modules captured by logger.sh.
+
 🧩 Architecture
-                 ┌──────────────────┐
-                 │     menu.sh      │
-                 │    Main Menu     │
-                 └────────┬─────────┘
-                          │
-          ┌───────────────┼────────────────┐
-          │               │                │
-          ▼               ▼                ▼
-   Individual        summary.sh        Exit option
-   monitor scripts   Full Monitor          │
-          │               │                ▼
-          │        Runs modules        logger.sh
-          │        sequentially            │
-          │                                ▼
-          │                           logs/*.log
-          │
-          └────────────────────────────────┐
-                                           ▼
-                                  advisor_wrapper.sh
-                                           │
-                                           ▼
-                                       advisor.c
-                                   C-based Advisor
+
+```mermaid
+flowchart TD
+    A["menu.sh<br/>Main Menu"]
+
+    A --> B["Individual Monitoring Scripts"]
+    A --> C["summary.sh<br/>Full Monitor"]
+    A --> D["Exit Option"]
+
+    C --> E["Runs Monitoring Modules Sequentially"]
+
+    D --> F["logger.sh"]
+    F --> G["logs/*.log"]
+
+    D --> H["advisor_wrapper.sh"]
+    H --> I["advisor.c<br/>C-based Advisor"]
+```
+
+
 ⚠️ Current Scope & Limitations
 - Monitors the local Linux machine only.
 - CPU utilization is a snapshot, not a long-term average.
